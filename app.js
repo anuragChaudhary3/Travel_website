@@ -24,3 +24,13 @@ app.get("/contact.html", (req, res)=>{
 app.get("/about.html", (req, res)=>{
   res.render("about");
 });
+
+app.post("/contact", (req, res)=>{
+  var username = req.body.username;
+  var phone = req.body.phone;
+  var email = req.body.email;
+  console.log(username);
+  console.log(phone);
+  console.log(email);
+  res.redirect("/");
+});
