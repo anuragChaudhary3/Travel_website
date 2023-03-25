@@ -12,3 +12,15 @@ app.listen("3000", ()=>{
 app.get("/", (req, res)=>{
   res.render("home");
 });
+
+app.get("/index.html", (req, res)=>{
+  res.redirect("/");
+});
+
+app.get("/contact.html", (req, res)=>{
+  res.render("contact");
+});
+
+app.get("/about.html", (req, res)=>{
+  res.render("about");
+});
